@@ -1,0 +1,37 @@
+{
+        "name": "hero",
+        "description": "A game server implementation for hero card games",
+        "keywords": ["hero", "game", "node", "node.js"],
+        "version": "0.0.1",
+        "homepage": "http://github.com/blacktail/hero.git",
+        "author": {
+                "name": "blacktail",
+                "email": "mr.zhangping@gmail.com"
+        },
+        "repository": {
+                "type": "git",
+                "url": "http://github.com/blacktail/hero.git"
+        },
+        "main": "./app.js",
+        "contributors": [{
+                "name": "blacktail",
+                "email": "mr.zhangping@gmail.com"
+        }],
+        "dependencies": {
+                "lodash": "~2.2.1",
+                "express": "~3.4.4",
+                "jade": "~0.35.0"
+        },
+        "devDependencies": {
+                "chai": "1.7.2",
+                "mocha": "1.12.0",
+                "supertest": "0.7.1"
+        },
+        "scripts": {
+                "test": "make test",
+                "prepublish": "npm prune"
+        },
+        "engines": {
+                "node": ">=0.6.0"
+        }
+}

@@ -1,0 +1,8 @@
+[
+	{
+		"url": "/login",
+		"module": "./login",
+		"function": "login",
+		"method": "get"
+	}
+]

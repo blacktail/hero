@@ -1,0 +1,17 @@
+{
+	"port": "3000",
+	"logging": {
+		"access": "access.log", 
+		"log4js": {
+			"appenders": [
+				{
+					"type": "file",
+					"filename": "hero.log",
+					"maxLogSize": 50000000,
+					"backups": 50
+				}
+			]
+		}
+	},
+	"sessionTimeout": 3600000
+}
