@@ -13,5 +13,6 @@
 			]
 		}
 	},
-	"sessionTimeout": 3600000
+	"sessionTimeout": 3600000,
+	"maxTeamMember": 5
 }

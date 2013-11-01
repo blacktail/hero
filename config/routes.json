@@ -1,8 +1,14 @@
 [
 	{
 		"url": "/login",
-		"module": "./login",
-		"function": "login",
+		"module": "./pages",
+		"func": "login",
 		"method": "get"
+	},
+	{
+		"url": "/login",
+		"module": "./api",
+		"func": "login",
+		"method": "post"
 	}
 ]
