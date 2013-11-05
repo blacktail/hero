@@ -5,33 +5,40 @@ html
 		meta(name="viewport",content="width=device-width")
 		title Login 
 		link(rel='stylesheet',href='css/foundation.css')
+		style.
+			#beginFight {
+				margin-left: 16px;
+			}
+			.level {
+				margin-right: 5px;
+			}
 		script(src="js/modernizr.js")
 		script#userHerosTpl(type="text/tmpl").
 			<% _.each(heros, function(hero) { %>
-				<li id="user_<%= hero.id%>">
+				<li id="user_<%= hero.id%>" class="button secondary expand" style="text-align: left;">
 					<span title="star: <%= hero.star %>
 					level: <%= hero.level %>
 					life: <%= Math.round(hero.life) %>
 					attack: <%= Math.round(hero.attack) %>"><%= hero.name %></span>
-					<a class="add-to-team">加入团队</a>
-					<a class="up-level">升级</a>
-					<span class="level right"><%= hero.level %></span>
+					<a class="add-to-team button tiny split success">加入团队</a>
+					<a class="up-level button split tiny success">升级</a>
+					<span class="level right">等级 <%= hero.level %></span>
 				</li>
 			<% }); %>
 		script#teamHerosTpl(type="text/tmpl").
 			<% _.each(heros, function(hero) { %>
-				<li id="team_<%= hero.id%>">
+				<li id="team_<%= hero.id%>" class="button expand">
 					<span title="star: <%= hero.star %>
 					level: <%= hero.level %>
 					life: <%= Math.round(hero.life) %>
 					attack: <%= Math.round(hero.attack) %>"><%= hero.name %></span>
-					<span class="level right"><%= hero.level %></span>
-					<a class="delete-from-team">离开团队</a>
+					<span class="level right">等级 <%= hero.level %></span>
+					<a class="delete-from-team button success tiny">离开团队</a>
 				</li>
 			<% }); %>
 		script#usersTpl(type="text/tmpl").
 			<% _.each(users, function(user) { %>
-				<li>
+				<li class="expand button">
 					<span class="user"><%= user.name %></span>
 				</li>
 			<% }); %>
@@ -43,14 +50,14 @@ html
 						p.title(data-section-title)
 							a#tabHero(href="panel1") 英雄
 						div.content(data-section-content)
-							ul#heroList.row
+							ul#heroList
 					section
 						p.title(data-section-title)
 							a#tabTeam(href="panel2") 团队
 						div.content(data-section-content)
 							div.row
 								div#beginFight.button.alert.round 开始战斗
-							ul#team.row
+							ul#team
 					section
 						p.title(data-section-title)
 							a#tabUser(href="panel3") 用户
