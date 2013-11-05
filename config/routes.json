@@ -1,14 +1,62 @@
 [
 	{
-		"url": "/login",
+		"url": "/",
 		"module": "./pages",
-		"func": "login",
+		"func": "index",
 		"method": "get"
 	},
 	{
 		"url": "/login",
-		"module": "./api",
+		"module": "./pages",
+		"func": "getLoginPage",
+		"method": "get"
+	},
+	{
+		"url": "/login",
+		"module": "./pages",
 		"func": "login",
+		"method": "post"
+	},
+	{
+		"url": "/users",
+		"module": "./api",
+		"func": "getUsers",
+		"method": "get"
+	},
+	{
+		"url": "/user/heros",
+		"module": "./api",
+		"func": "getUserHeros",
+		"method": "get"
+	},
+	{
+		"url": "/hero/:hid/uplevel",
+		"module": "./api",
+		"func": "upLevel",
+		"method": "post"
+	},
+	{
+		"url": "/team/hero/:hid",
+		"module": "./api",
+		"func": "addHeroToTeam",
+		"method": "post"
+	},
+	{
+		"url": "/team/hero/:hid",
+		"module": "./api",
+		"func": "deleteHeroToTeam",
+		"method": "delete"
+	},
+	{
+		"url": "/team/heros",
+		"module": "./api",
+		"func": "getTeamHeros",
+		"method": "get"
+	},
+	{
+		"url": "/team/fight",
+		"module": "./api",
+		"func": "fight",
 		"method": "post"
 	}
 ]
