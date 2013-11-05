@@ -26,6 +26,11 @@ $(function() {
 
 		$.post('team/hero/' + heroId, function(data) {
 			console.log(data);
+			if (data.status) {
+				alert('加入团队成功');
+			} else {
+				alert('加入团队失败，' + data.msg);
+			}
 		});
 	});
 
